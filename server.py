@@ -1,3 +1,10 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "API está funcionando corretamente!"}
 from fastapi import FastAPI, File, UploadFile
 import cv2
 import numpy as np
